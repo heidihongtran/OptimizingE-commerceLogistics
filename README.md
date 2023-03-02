@@ -30,3 +30,21 @@ main categories: categorical variables like Warehouse_block, Mode_of_Shipment,
 Product_importance, and Gender and numerical variables like ID, Customer_care_calls,
 Customer_rating, Cost_of_the_Product, Prior_purchases, Discount_offered, Weight_in_gms, and
 Reached.on.Time_Y.N.
+
+After preprocessing data, we build the Neural Network model:
+
+We start by forming the structure of the neural network. Because our dataset is less
+complex and the model is for binary classification, it works best with a single hidden layer neural
+network. The size of the input layer is equal to the number of predictors (19), while the output
+layer has 1 node. Out of this, the number of nodes in the hidden layer should be equal to twothirds
+of the input layer size plus the output layer size. As a result, there are a total of 14 hidden
+neurons.
+
+In this project, we will be using a data frame with 10,999 observations, 19 updated
+predictor variables given in Table 4 (including new dummy variables converted from categorical
+variables), and one dependent variable, Shipment_status, to develop the model. The dataset is
+partitioned into a training set, a validation set, and a test set with the corresponding ratios of
+0.8:0.19:0.01. The next step is fitting the training data into a neural network with 1 hidden layer
+and 14 hidden nodes, using the logistic activation function to determine the output of the neural
+network, whether it is on-time or delayed. The conditional probability for the neural network's
+performance is then generated and assessed using the confusion technique.
